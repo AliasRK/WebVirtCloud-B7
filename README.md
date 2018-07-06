@@ -257,6 +257,7 @@ git pull
 virtualenv venv
 source venv/bin/activate
 pip install -r conf/requirements.txt
+sudo venv/bin/pip install -r conf/requirements.txt #this command is for CentOS only!!!
 python manage.py migrate
 sudo service supervisor restart
 deactivate
