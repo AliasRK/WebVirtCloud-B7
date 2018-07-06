@@ -30,13 +30,6 @@ sudo service supervisor restart
 
 WebVirtCloud is a virtualization web interface for admins and users. It can delegate Virtual Machine's to users. A noVNC viewer presents a full graphical console to the guest domain.  KVM is currently the only hypervisor supported.
 
-### Generate secret key
-You should generate SECRET_KEY after cloning repo. Execute the python script, copy the output that it prints and then put it into webvirtcloud/settings.py in the "SECRET_KEY = ''" field:
-
-```bash
-python generate_secret_key.py
-```
-
 ### Install WebVirtCloud panel (Ubuntu)
 
 ```bash
@@ -57,6 +50,14 @@ pip install -r conf/requirements.txt
 python manage.py migrate
 sudo chown -R www-data:www-data /srv/webvirtcloud
 sudo rm /etc/nginx/sites-enabled/default
+```
+### Generate secret key
+You should generate SECRET_KEY after cloning repo and BEFORE starting the application for the first time.
+Execute the python script, that is located in the main directory of the cloned repo. Copy the output that it prints$
+
+```bash
+cd /srv/webvirtcloud
+python generate_secret_key.py
 ```
 
 Restart services for running WebVirtCloud:
