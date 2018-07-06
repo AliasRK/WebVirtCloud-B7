@@ -83,7 +83,7 @@ sudo yum -y install python-virtualenv python-devel libvirt-devel glibc gcc nginx
 
 ```bash
 sudo mkdir /srv && cd /srv
-sudo git clone https://github.com/retspen/webvirtcloud && cd webvirtcloud
+sudo git clone https://github.com/Bandic007/WebVirtCloud-B7 && cd webvirtcloud
 cp webvirtcloud/settings.py.template webvirtcloud/settings.py
 # now put secret key to webvirtcloud/settings.py
 ```
