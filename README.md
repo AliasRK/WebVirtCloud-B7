@@ -1,5 +1,15 @@
 ## WebVirtCloud - Bandic007 (B7) updated and fixed edition
 
+##Credits
+This version of WebVirtCloud was forked from [@catborise](https://github.com/catborise/webvirtcloud) repo, which is a forked and modified (with upgrades of UI and functionality) versio of [@retspen](https://github.com/retspen/webvirtcloud) repo.
+Thanks to both of them for the amazing job they did!
+
+The B7 version in this repo has some fixes applied on problems from the upgraded [@catborise](https://github.com/catborise/webvirtcloud) repo. They were:
+* fixed not working login page
+* fixed not working (loading) "Instances" page
+
+This version will always be updated with the latest changes from both repos and I will try to apply fixes to all bugs I find, in order to make it always running from the first time you deploy it!
+Also, I will escalate "Pull requests" to both those guys in order to offer them my fixes in thei repos!
 
 ## Features
 
