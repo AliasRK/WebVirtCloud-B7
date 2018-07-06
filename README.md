@@ -53,7 +53,7 @@ sudo rm /etc/nginx/sites-enabled/default
 ```
 ### Generate secret key
 You should generate SECRET_KEY after cloning repo and BEFORE starting the application for the first time.
-Execute the python script, that is located in the main directory of the cloned repo. Copy the output that it prints$
+Execute the python script, that is located in the main directory of the cloned repo. Copy the output that it prints.
 
 ```bash
 cd /srv/webvirtcloud
