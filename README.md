@@ -60,14 +60,14 @@ cd /srv/webvirtcloud
 python generate_secret_key.py
 ```
 
-Restart services for running WebVirtCloud:
+### Restart services for running WebVirtCloud:
 
 ```bash
 sudo service nginx restart
 sudo service supervisor restart
 ```
 
-Setup libvirt and KVM on server
+### Setup libvirt and KVM on server
 
 ```bash
 wget -O - https://clck.ru/9V9fH | sudo sh
