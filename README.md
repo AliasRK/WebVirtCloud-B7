@@ -244,6 +244,7 @@ cd /srv/webvirtcloud
 git pull
 virtualenv venv
 source venv/bin/activate
+pip install Django==1.11.14
 python manage.py migrate
 sudo service supervisor restart
 deactivate
