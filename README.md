@@ -1,6 +1,6 @@
 ## WebVirtCloud - Bandic007 (B7) updated and fixed edition
 
-##Credits
+## Credits
 This version of WebVirtCloud was forked from [@catborise](https://github.com/catborise/webvirtcloud) repo, which is a forked and modified (with upgrades of UI and functionality) versio of [@retspen](https://github.com/retspen/webvirtcloud) repo.
 Thanks to both of them for the amazing job they did!
 
