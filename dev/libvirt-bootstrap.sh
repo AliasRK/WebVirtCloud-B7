@@ -410,18 +410,18 @@ install_centos_post() {
     fi
     if [ $DISTRO_MAJOR_VERSION -lt 7 ]; then
         if [ -f /etc/supervisord.conf ]; then
-            curl https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/daemon/gstfsd > /usr/local/bin/gstfsd
+            curl https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/daemon/gstfsd > /usr/local/bin/gstfsd
             chmod +x /usr/local/bin/gstfsd
-            curl https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/supervisor/gstfsd.conf >> /etc/supervisor.conf
+            curl https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/supervisor/gstfsd.conf >> /etc/supervisor.conf
         else
             echoerror "Supervisor not found. Exiting..."
             exit 1
         fi
     else
         if [ -f /etc/supervisord.conf ]; then
-            curl https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/daemon/gstfsd > /usr/local/bin/gstfsd
+            curl https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/daemon/gstfsd > /usr/local/bin/gstfsd
             chmod +x /usr/local/bin/gstfsd
-            curl https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/supervisor/gstfsd.conf > /etc/supervisord.d/gstfsd.ini
+            curl https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/supervisor/gstfsd.conf > /etc/supervisord.d/gstfsd.ini
         else
             echoerror "Supervisor not found. Exiting..."
             exit 1
@@ -493,9 +493,9 @@ install_fedora_post() {
         exit 1
     fi
     if [ -f /etc/supervisord.conf ]; then
-        curl https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/daemon/gstfsd > /usr/local/bin/gstfsd
+        curl https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/daemon/gstfsd > /usr/local/bin/gstfsd
         chmod +x /usr/local/bin/gstfsd
-        curl https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/supervisor/gstfsd.conf > /etc/supervisord.d/gstfsd.ini
+        curl https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/supervisor/gstfsd.conf > /etc/supervisord.d/gstfsd.ini
     else
         echoerror "Supervisor not found. Exiting..."
         exit 1
@@ -554,9 +554,9 @@ install_opensuse_post() {
         exit 1
     fi
     if [ -f /etc/supervisord.conf ]; then
-        curl https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/daemon/gstfsd > /usr/local/bin/gstfsd
+        curl https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/daemon/gstfsd > /usr/local/bin/gstfsd
         chmod +x /usr/local/bin/gstfsd
-        curl https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/supervisor/gstfsd.conf > /etc/supervisor.d/gstfsd.ini
+        curl https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/supervisor/gstfsd.conf > /etc/supervisor.d/gstfsd.ini
     else
         echoerror "Supervisor not found. Exiting..."
         exit 1
@@ -620,9 +620,9 @@ install_ubuntu_post() {
         exit 1
     fi
     if [ -f /etc/supervisor/supervisord.conf ]; then
-        wget -O /usr/local/bin/gstfsd https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/daemon/gstfsd
+        wget -O /usr/local/bin/gstfsd https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/daemon/gstfsd
         chmod +x /usr/local/bin/gstfsd
-        wget -O /etc/supervisor/conf.d/gstfsd.conf https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/supervisor/gstfsd.conf
+        wget -O /etc/supervisor/conf.d/gstfsd.conf https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/supervisor/gstfsd.conf
     else
         echoerror "Supervisor not found. Exiting..."
         exit 1
@@ -691,9 +691,9 @@ install_debian_post() {
         exit 1
     fi
     if [ -f /etc/supervisor/supervisord.conf ]; then
-        wget -O /usr/local/bin/gstfsd https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/daemon/gstfsd
+        wget -O /usr/local/bin/gstfsd https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/daemon/gstfsd
         chmod +x /usr/local/bin/gstfsd
-        wget -O /etc/supervisor/conf.d/gstfsd.conf https://raw.githubusercontent.com/retspen/webvirtcloud/master/conf/supervisor/gstfsd.conf
+        wget -O /etc/supervisor/conf.d/gstfsd.conf https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/conf/supervisor/gstfsd.conf
     else
         echoerror "Supervisor not found. Exiting..."
         exit 1
