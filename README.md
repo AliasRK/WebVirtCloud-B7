@@ -1,4 +1,4 @@
-## WebVirtCloud Beta
+## WebVirtCloud - Bandic007 (B7) updated and fixed edition
 
 
 ## Features
@@ -230,11 +230,16 @@ datasource:
 
 ### How To Update
 ```bash
+cd /srv/webvirtcloud
 git pull
+virtualenv venv
+source venv/bin/activate
 python manage.py migrate
 sudo service supervisor restart
+deactivate
 ```
 
 ### License
 
 WebVirtCloud is licensed under the [Apache Licence, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+
