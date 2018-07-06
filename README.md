@@ -259,7 +259,9 @@ source venv/bin/activate
 pip install -r conf/requirements.txt
 sudo venv/bin/pip install -r conf/requirements.txt #this command is for CentOS only!!!
 python manage.py migrate
+sudo venv/bin/python manage.py migrate #this command is for CentOS only!!!
 sudo service supervisor restart
+systemctl restart supervisord #this command is for CentOS only!!!
 deactivate
 ```
 
