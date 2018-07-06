@@ -82,10 +82,15 @@ sudo yum -y install python-virtualenv python-devel libvirt-devel glibc gcc nginx
 #### Creating directories and cloning repo
 
 ```bash
-sudo mkdir /srv && cd /srv
-sudo git clone https://github.com/Bandic007/WebVirtCloud-B7 && cd webvirtcloud
+cd /tmp
+sudo git clone https://github.com/Bandic007/WebVirtCloud-B7 && cd WebVirtCloud-B7
+cd WebVirtCloud-B7
 cp webvirtcloud/settings.py.template webvirtcloud/settings.py
 # now put secret key to webvirtcloud/settings.py
+cd ..
+sudo mkdir /srv
+sudo mv WebVirtCloud-B7/ /srv/webvirtcloud
+cd /srv/webvirtcloud
 ```
 
 #### Start installation webvirtcloud
@@ -117,6 +122,14 @@ user=nginx
 autostart=true
 autorestart=true
 redirect_stderr=true
+```
+### Generate secret key
+You should generate SECRET_KEY after cloning repo and BEFORE starting the application for the first time.
+Execute the python script, that is located in the main directory of the cloned repo. Copy the output that it$
+
+```bash
+cd /srv/webvirtcloud
+python generate_secret_key.py
 ```
 
 #### Edit the nginx.conf file
@@ -243,7 +256,7 @@ cd /srv/webvirtcloud
 git pull
 virtualenv venv
 source venv/bin/activate
-pip install Django==1.11.14
+pip install -r conf/requirements.txt
 python manage.py migrate
 sudo service supervisor restart
 deactivate
