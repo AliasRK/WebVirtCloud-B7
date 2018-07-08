@@ -236,7 +236,7 @@ WSGIScriptAlias / /srv/webvirtcloud/webvirtcloud/wsgi_custom.py
 
 #### Install final required packages for libvirtd and others on Host Server
 ```bash
-wget -O - https://clck.ru/9V9fH | sudo sh
+wget -O - https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/modules/libvirt-bootstrap | sudo sh
 ```
 
 Done!!
