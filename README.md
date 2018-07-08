@@ -29,7 +29,7 @@ Also, I will escalate "Pull requests" to both those guys in order to offer them 
 How to update <code>gstfsd</code> daemon on hypervisor:
 
 ```bash
-wget -O - https://clck.ru/9VMRH | sudo tee -a /usr/local/bin/gstfsd
+wget -O - https://raw.githubusercontent.com/Bandic007/WebVirtCloud-B7/master/modules/gstfsd | sudo tee -a /usr/local/bin/gstfsd
 sudo service supervisor restart
 ```
 
