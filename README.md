@@ -13,6 +13,7 @@ The B7 version in this repo has some fixes applied on problems from the upgraded
 * updated manual and update procedures
 * all fixes included in this release for instant working deployment
 * added B7 mod version, displayed on login, logout pages and top bar.
+* added included custom python scrypt for easier Django "SECRET_KEY" creation
 
 This version will always be updated with the latest changes from both repos and I will try to apply fixes to all bugs I find, in order to make it always running from the first time you deploy it!
 Also, I will escalate "Pull requests" to both those guys in order to offer them my fixes in thei repos!
