@@ -77,7 +77,7 @@ sudo service supervisor restart
 ### Setup libvirt and KVM on server
 
 ```bash
-wget -O - https://clck.ru/9V9fH | sudo sh
+wget -O - https://raw.githubusercontent.com/retspen/webvirtcloud/master/dev/libvirt-bootstrap.sh | sudo sh
 ```
 
 ### Install WebVirtCloud panel (CentOS)
