@@ -5,6 +5,7 @@ This version of WebVirtCloud was forked from [@catborise](https://github.com/cat
 Thanks to both of them for the amazing job they did!
 
 The B7 version in this repo has some fixes applied on problems from the upgraded [@catborise](https://github.com/catborise/webvirtcloud) repo. They were:
+Initial version 1.0:
 * fixed not working login page
 * fixed not working (loading) "Instances" page - missconfigured variable in the code
 * fixed python required packages version
@@ -14,6 +15,13 @@ The B7 version in this repo has some fixes applied on problems from the upgraded
 * all fixes included in this release for instant working deployment
 * added B7 mod version, displayed on login, logout pages and top bar.
 * added included custom python scrypt for easier Django "SECRET_KEY" creation
+
+Version 1.1
+* included all previous fixes of course
+* added visual changes in instances web page
+* fixed some requirements versions
+* removed old outdated requirements
+* fixed VM conversion into template problem, caused by html code problem
 
 This version will always be updated with the latest changes from both repos and I will try to apply fixes to all bugs I find, in order to make it always running from the first time you deploy it!
 Also, I will escalate "Pull requests" to both those guys in order to offer them my fixes in thei repos!
