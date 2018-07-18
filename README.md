@@ -40,7 +40,7 @@ WebVirtCloud is a virtualization web interface for admins and users. It can dele
 ### Install WebVirtCloud panel (Ubuntu)
 
 ```bash
-sudo apt-get -y install git python-virtualenv python-dev python-lxml libvirt-dev zlib1g-dev nginx supervisor libsasl2-modules gcc pkg-config
+sudo apt-get -y install git python-virtualenv python-dev python-lxml libvirt-dev zlib1g-dev nginx supervisor libsasl2-modules gcc pkg-config python-libguestfs
 git clone https://github.com/Bandic007/WebVirtCloud-B7.git
 cd WebVirtCloud-B7
 cp webvirtcloud/settings.py.template webvirtcloud/settings.py
@@ -83,7 +83,7 @@ wget -O - https://raw.githubusercontent.com/retspen/webvirtcloud/master/dev/libv
 ### Install WebVirtCloud panel (CentOS)
 
 ```bash
-sudo yum -y install python-virtualenv python-devel libvirt-devel glibc gcc nginx supervisor libxml2 libxml2-devel git
+sudo yum -y install python-virtualenv python-devel libvirt-devel glibc gcc nginx supervisor libxml2 libxml2-devel git python-libguestfs
 ```
 
 #### Creating directories and cloning repo
@@ -263,7 +263,7 @@ cd /srv/webvirtcloud
 git pull
 virtualenv venv
 source venv/bin/activate
-pip install -r conf/requirements.txt
+pip install -U -r conf/requirements.txt
 sudo venv/bin/pip install -r conf/requirements.txt #this command is for CentOS only!!!
 python manage.py migrate
 sudo venv/bin/python manage.py migrate #this command is for CentOS only!!!
