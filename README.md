@@ -23,6 +23,7 @@ Version 1.1
 * fixed some requirements versions
 * removed old outdated requirements
 * fixed VM conversion into template problem, caused by html code problem
+* fixed network details not opening in compute section because of changes needed in python code
 
 This version will always be updated with the latest changes from both repos and I will try to apply fixes to all bugs I find, in order to make it always running from the first time you deploy it!
 Also, I will escalate "Pull requests" to both those guys in order to offer them my fixes in thei repos!
