@@ -5,7 +5,8 @@ This version of WebVirtCloud was forked from [@catborise](https://github.com/cat
 Thanks to both of them for the amazing job they did!
 
 The B7 version in this repo has some fixes applied on problems from the upgraded [@catborise](https://github.com/catborise/webvirtcloud) repo. They were:
-Initial version 1.0:
+
+Initial Version 1.0:
 * fixed not working login page
 * fixed not working (loading) "Instances" page - missconfigured variable in the code
 * fixed python required packages version
