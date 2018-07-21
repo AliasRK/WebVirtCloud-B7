@@ -26,6 +26,13 @@ Version 1.1:
 * fixed VM conversion into template problem, caused by html code problem
 * fixed network details not opening in compute section because of changes needed in python code
 * changed the order of "used size / total size" display in single storage html page
+  * Version 1.1 - Patch 1 (1.1.1)
+    * fixed variable typo in python code
+    * fixed issues if there is an inactive storage, which was causing a problem
+    * volume file extension converted to choosabe via settings
+    * volume file extensions reorganized and added "qcow2" image format as default one
+    * changed hosts behavior when getting list of active/inactive sotrages to avoid break whena storage is inactive
+    * removed data sort possibility
 
 This version will always be updated with the latest changes from both repos and I will try to apply fixes to all bugs I find, in order to make it always running from the first time you deploy it!
 Also, I will escalate "Pull requests" to both those guys in order to offer them my fixes in their repos!
