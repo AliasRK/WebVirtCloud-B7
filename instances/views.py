@@ -5,7 +5,7 @@ import socket
 import crypt
 import re
 import string
-from random import choice
+import random
 from bisect import insort
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -912,10 +912,9 @@ def inst_graph(request, compute_id, vname):
     response.write(data)
     return response
 
-@login_required
-def guess_mac_address(request, vname):
+def _get_dhcp_mac_address(vname):
     dhcp_file = '/srv/webvirtcloud/dhcpd.conf'
-    data = {'vname': vname, 'mac': '52:54:00:'}
+    mac = ''
     if os.path.isfile(dhcp_file):
         with open(dhcp_file, 'r') as f:
             name_found = False
@@ -923,8 +922,31 @@ def guess_mac_address(request, vname):
                 if "host %s." % vname in line:
                     name_found = True
                 if name_found and "hardware ethernet" in line:
-                    data['mac'] = line.split(' ')[-1].strip().strip(';')
+                    mac = line.split(' ')[-1].strip().strip(';')
                     break
+    return mac
+
+@login_required
+def guess_mac_address(request, vname):
+    data = { 'vname': vname }
+    mac = _get_dhcp_mac_address(vname)
+    if not mac:
+        mac = _get_random_mac_address()
+    data['mac'] = mac
+    return HttpResponse(json.dumps(data))
+
+def _get_random_mac_address():
+    mac = '52:54:00:%02x:%02x:%02x' % (
+        random.randint(0x00, 0xff),
+        random.randint(0x00, 0xff),
+        random.randint(0x00, 0xff)
+    )
+    return mac
+
+@login_required
+def random_mac_address(request):
+    data = {}
+    data['mac'] = _get_random_mac_address()
     return HttpResponse(json.dumps(data))
 
 @login_required

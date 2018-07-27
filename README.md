@@ -1,4 +1,4 @@
-## WebVirtCloud - Bandic007 (B7) updated and fixed edition - Version 1.1.1
+## WebVirtCloud - Bandic007 (B7) updated and fixed edition - Version 1.1.2
 
 ## Credits
 This version of WebVirtCloud was forked from [@catborise](https://github.com/catborise/webvirtcloud) repo, which is a forked and modified (with upgrades of UI and functionality) versio of [@retspen](https://github.com/retspen/webvirtcloud) repo.
@@ -35,6 +35,9 @@ Version 1.1:
     * removed data sort possibility
     * fixed some html problems
     * some fixes regarding libxml2 to lxml conversion
+  * Version 1.1 - Patch 2 (1.1.2)
+    * Fixed problem with mac address when cloning a VM template from staff user
+    * Removed sorting on instances page when lgged in as Super User because of some problems. For staff users it still exists. Will be fixed soon when a solution for it is found.
 
 This version will always be updated with the latest changes from both repos and I will try to apply fixes to all bugs I find, in order to make it always running from the first time you deploy it!
 Also, I will escalate "Pull requests" to both those guys in order to offer them my fixes in their repos!
